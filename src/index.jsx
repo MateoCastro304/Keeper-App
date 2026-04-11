@@ -17,3 +17,6 @@ import "./styles.css";
 import App from "./components/App";
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+//Implement the add note functionality
+//Implement the delete note functionality
