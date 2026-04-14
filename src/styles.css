@@ -67,7 +67,7 @@ footer p {
   cursor: pointer;
   outline: none;
   background-color: rgba(255, 255, 255, 0);
-  transition: color 0.5s;
+  transition: color 0.3s;
 }
 
 .note button:hover{
@@ -107,9 +107,10 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+  transition: background-color 0.3s ease !important;
 }
 
 form.create-note button:hover {
-  background-color:#daa412;
+  background:#daa412 !important;
 }
 

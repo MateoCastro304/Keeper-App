@@ -6,8 +6,8 @@ import { Zoom } from "@mui/material";
 
 function CreateArea(props) {
   const [newNote, setNewNote] = useState({
-    title:"",
-    content:"",
+    title: "",
+    content: "",
   });
 
   const [onCreate, setOnCreate] = useState(false)
@@ -24,9 +24,9 @@ function CreateArea(props) {
   function handleClick(e) {
     props.onAdd(newNote);
     setNewNote({
-                title:"",
-                content:"",
-              });
+      title: "",
+      content: "",
+    });
   }
 
   function handleInpClick(e) {
@@ -35,17 +35,17 @@ function CreateArea(props) {
 
   return (
     <div >
-      <form className="create-note" onSubmit={(e) => {e.preventDefault();}}>
-       { onCreate && <input onChange={handleInput} name="title" placeholder="Title" value={newNote.title} />}
-        
-        <textarea onClick={handleInpClick} onChange={handleInput} name="content" placeholder="Take a note..." rows={onCreate ? "3":"1"} value={newNote.content}/>
+      <form className="create-note" onSubmit={(e) => { e.preventDefault(); }}>
+        {onCreate && <input onChange={handleInput} name="title" placeholder="Title" value={newNote.title} />}
+
+        <textarea onClick={handleInpClick} onChange={handleInput} name="content" placeholder="Take a note..." rows={onCreate ? "3" : "1"} value={newNote.content} />
         <Zoom in={onCreate}>
           <Fab onClick={handleClick}>
             <Add />
           </Fab>
         </Zoom>
       </form>
-      
+
     </div>
   );
 }
